@@ -1,0 +1,42 @@
+<Cuadratica.html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // Solicitar al usuario 3 números
+            let a = parseInt(prompt("Ingresa el coeficiente a", " "));
+            let b = parseInt(prompt("Ingresa el coeficiente b", " "));
+            let c = parseInt(prompt("Ingresa el coeficiente c", " "));
+    
+            // calculamos la discriminante
+            let d = Math.pow(b,2) - (4 * a * c);
+    
+            //Discriminante mayor a 0
+            if (d > 0 ){
+                let x1 = (-(b) + Math.sqrt(d))/(2*a);
+                let x2 = (b*(-1) - Math.sqrt(d))/(2*a);
+                alert("De acuerdo a los coeficientes proporcionados \na= " +a+ "\nb= " +b+ "\nc= " +c+ "\nLa ecuacion tiene dos soluciones, son números reales distintos: \nX1= " + x1 + "\nX2= " + x2);
+            }
+    
+            //Discriminante igual a 0
+            if( d == 0 ){
+                let x = (-(b) + Math.sqrt(d))/(2*a);
+    
+                alert("De acuerdo a los coeficientes proporcionados \na= " +a+ "\nb= " +b+ "\nc= " +c+ "\nLa ecuación tiene solución doblemente igual: \n X= " +x);
+            }
+    
+            //Discriminante menos a 0
+            if( d < 0){
+                alert("La ecuación no tiene soluciones reales.");
+            }
+    
+    
+        </script>
+        
+    </body>
+    </html>
