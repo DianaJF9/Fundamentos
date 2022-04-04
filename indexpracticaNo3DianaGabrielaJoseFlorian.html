@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Solicitar al usuario 2 números y el operador y realizar la operación utilizada */
+        let num1 = prompt("Ingresa un número", " ");
+        let op = prompt("Ingresa un operador /nSi deseas realizar una raiz ingresa la palara raiz \n Si deseas realizar una potencia inserta el signo ^ \n Si no es uno de estos dos, coloca uno de los operadores ya conocidos");
+        let num2 = prompt("Ingresa otro número", " ");
+
+        /* Si el operador ingresado es "+" entonces realizamos la suma y guardamos el resultado */
+        if (op == "+"){
+            suma = (parseInt(num1)) + (parseInt(num2));
+            alert("La suma de \n" + num1 + " " + op + " " +num2 + " = "  + suma + "\nGRACIAS");
+        } if(op == "-"){
+            resta = (parseInt(num1)) - (parseInt(num2));
+            alert("La resta de \n" + num1 + " " + op + " " +num2 + " = "  + resta + "\nGRACIAS");
+        }if (op == "*"){
+            mult = (parseInt(num1)) * (parseInt(num2));
+            alert("La multiplicación de \n" + num1 + " " + op + " " +num2 + " = "  + mult + "\nGRACIAS");
+        }if (op == "/"){
+            div = (parseInt(num1)) / (parseInt(num2));
+            alert("La división de \n" + num1 + " " + op + " " + num2 + " = "  + div + "\nGRACIAS");
+        }if (op == "^"){
+            potencia = Math.pow(num1,num2);
+            alert("El numero \n" +num1+ " elevado a la " + num2 + " es= " +potencia+ "\nGRACIAS");
+        }if (op == "raiz"){
+            r = Math.pow(num1, 1/num2); 
+            alert("La raiz " +num2+ "de " + num1 + " es " + r + "\nGRACIAS");
+        }else{
+            alert("Lo sentimos, ingresaste un operador no registrado.");
+        }             
+        
+    </script>    
+</body>
+</html>
