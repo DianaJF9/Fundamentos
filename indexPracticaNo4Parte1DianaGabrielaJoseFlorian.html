@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let i
+        do{
+            let num1 = prompt("Ingresa un número", " ");
+            let op = prompt("Ingresa un operador: \n Suma = '+' \n Resta = '-' \n Multiplicación = '*' \n División = '/' \n Potenciación = '^' \n Radicación = 'Raiz' ");
+            let num2 = prompt("Ingresa otro número", " ");
+            /* Si el operador ingresado es "+" entonces realizamos la suma y guardamos el resultado */
+            switch(op){ 
+                case "+" :
+                    suma = (parseInt(num1)) + (parseInt(num2));
+                    alert("La suma de \n" + num1 + " " + op + " " +num2 + " = "  + suma + "\nGRACIAS");
+                break;
+                case "-" :
+                    resta = (parseInt(num1)) - (parseInt(num2));
+                    alert("La resta de \n" + num1 + " " + op + " " +num2 + " = "  + resta + "\nGRACIAS");
+                break;
+                case "*" :
+                mult = (parseInt(num1)) * (parseInt(num2));
+                alert("La multiplicación de \n" + num1 + " " + op + " " +num2 + " = "  + mult + "\nGRACIAS");
+                break;
+                case "/":
+                    div = (parseInt(num1)) / (parseInt(num2));
+                    alert("La división de \n" + num1 + " " + op + " " + num2 + " = "  + div + "\nGRACIAS");
+                break;
+                case "^" :
+                    potencia = Math.pow(num1,num2);
+                    alert("El numero \n" +num1+ " elevado a la " + num2 + " es= " +potencia+ "\nGRACIAS");
+                break;
+                case "Raiz" :
+                    r = Math.pow(num1, 1/num2); 
+                    alert("La raiz " +num2+ "de " + num1 + " es " + r + "\nGRACIAS");
+                break;
+                default:
+                    alert("Lo sentimos, ingresaste un operador no registrado.");
+                break;  
+            }
+            i = prompt("Desea volver a ejecutar otra operación? ")
+
+        }while(i=="Si"||i=="SI"||i=="si");      
+    </script>    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+        //1)Programar una función que cuente el número de caracteres de una cadena de texto, pe. miFunción("Hola Mundo") devolverá 10
+        function contarCaracteres(cadena = ""){
+                if (!cadena){
+                    //console.warn() imprime unmensaje de advertencia en la consola web
+                    console.warn("No ingresó ninguna cadena");
+                }else{
+                    console.info("La cadena " +cadena+ " tiene "  +cadena.length+ " caracteres");
+                }
+        }
+        contarCaracteres("Hola Mundo"); 
+        
+
+        // 2)Programa una función que te devuelva el texto según el número de caracteres indicados.
+        /*const recortarTexto =(cadena = "", longitud = undefine)=>(!cadena) ? console.warn("No ingresó ninguna cadena") : (longitud === undefined) ? console.warn ("No ingresaste la longitud para recortar el texto") : console.info(cadena.slice(0,longitud));
+            
+        recortarTexto("Hola Mundo", 4);*/
+
+        //3)Programa una función que dada una String te devuelvaun Array de textos separados por cierto caracter
+        /*const cadenaAArreglo = (cadena="", separador = undefined) => (!cadena)? console.warn("No ingresaste una cadena de texto") : (separador === undefined) ? console.warn("No ingresaste el caracter separador"):console.info(cadena.split(separador));    
+        
+        cadenaAArreglo("Ene,FEb,Mar,Abr,May,Jun,Jul,Ago,Sep,Oct,Nov,Dic", ",")*/
+        //4)Programa una función que repita un texto X veces.
+        /*const repetirTexto = (texto = "", veces = undefined) =>{
+            if (!texto) return console.warn("No ingresaste un texto");
+            if (veces === undefined) return console.warn("No ingresaste el número de veces a repetir el texto") ;
+            if (veces === 0) return console.error("El número de veces no puede ser 0");
+            if (Math.sign(veces) === -1) return console.error("El número de veces no puede ser negativo");
+            for (let i = 1; i <= veces; i++) console.info("+texto+, +i+");
+        }
+        repetirTexto("Hola Mundo", 3);*/
+
+    </script>    
+</body>
+</html>
